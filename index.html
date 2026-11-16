@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>نامه‌ای برای تو</title>
+  <meta name="description" content="یک نامه‌ی کوچک، از طرفِ کسی که دوستت دارد.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1c1418">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="نامه‌ای برای تو">
+  <meta property="og:description" content="یک نامه‌ی کوچک، از طرفِ کسی که دوستت دارد.">
+  <meta property="og:image" content="assets/og.jpg">
+  <meta property="og:locale" content="fa_IR">
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231c1418'/%3E%3Cpath d='M16 24s-7.2-4.6-9.2-8.5C5.1 12 6.6 8.6 9.9 8c2.4-.4 4.8.8 6.1 2.7C17.3 8.8 19.7 7.6 22.1 8c3.3.6 4.8 4 3.1 7.5C23.2 19.4 16 24 16 24z' fill='%23a3656f'/%3E%3Cpath d='M16 21s-5-3.2-6.4-5.9c-1.1-2.1-.2-4.4 2.1-4.8 1.7-.3 3.4.6 4.3 1.9.9-1.3 2.6-2.2 4.3-1.9 2.3.4 3.2 2.7 2.1 4.8C21 17.8 16 21 16 21z' fill='%23e8cbc8'/%3E%3C/svg%3E">
+
+  <link rel="preload" href="assets/fonts/vazirmatn-arabic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-scene="envelope">
+
+  <!-- ───────────────── اتاقِ گرم، پنجره‌ی برفی، شومینه ───────────────── -->
+  <div class="room" aria-hidden="true">
+    <div class="window">
+      <div class="window__glass">
+        <span class="moon"></span>
+        <span class="sky-haze"></span>
+        <svg class="pines" viewBox="0 0 240 92" preserveAspectRatio="xMidYMax meet">
+          <g fill="#0a1619">
+            <path d="M40 92V70M40 70L18 70 40 30 62 70Z" />
+            <path d="M84 92V76M84 76L66 76 84 44 102 76Z" opacity=".85" />
+            <path d="M188 92V68M188 68L162 68 188 22 214 68Z" />
+            <path d="M138 92V78M138 78L122 78 138 52 154 78Z" opacity=".7" />
+          </g>
+          <g fill="#dce9e9" opacity=".42">
+            <path d="M40 30l-7 12h14zM188 22l-8 14h16zM84 44l-6 10h12zM138 52l-5 9h10z" />
+          </g>
+        </svg>
+        <span class="snowfield"></span>
+        <div class="snow" id="snow"></div>
+        <span class="glass-reflection"></span>
+      </div>
+      <span class="window__muntins"></span>
+      <span class="window__frost"></span>
+      <span class="window__sill"></span>
+      <span class="curtain curtain--right"></span>
+      <span class="curtain curtain--left"></span>
+    </div>
+
+    <div class="fireplace">
+      <span class="fireplace__halo"></span>
+      <div class="hearth">
+        <div class="hearth__opening">
+          <div class="fire">
+            <span class="flame flame--1"></span>
+            <span class="flame flame--2"></span>
+            <span class="flame flame--3"></span>
+            <span class="fire__core"></span>
+            <span class="spark spark--1"></span>
+            <span class="spark spark--2"></span>
+            <span class="spark spark--3"></span>
+            <span class="spark spark--4"></span>
+            <span class="logs"><i></i><i></i></span>
+          </div>
+          <span class="hearth__glow"></span>
+        </div>
+        <span class="hearth__texture"></span>
+      </div>
+      <div class="mantel">
+        <span class="candle"><i></i></span>
+        <span class="candle candle--2"><i></i></span>
+        <span class="mantel__frame"></span>
+      </div>
+    </div>
+
+    <div class="bouquet">
+      <svg viewBox="0 0 320 400" preserveAspectRatio="xMidYMax meet" class="bouquet__svg">
+        <defs>
+          <linearGradient id="vaseG" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#9a6a7b" />
+            <stop offset=".42" stop-color="#6b3d50" />
+            <stop offset="1" stop-color="#3a2030" />
+          </linearGradient>
+          <linearGradient id="stemG" x1="0" y1="1" x2="0" y2="0">
+            <stop offset="0" stop-color="#173a31" />
+            <stop offset="1" stop-color="#2e5c4d" />
+          </linearGradient>
+          <linearGradient id="leafG" x1="0" y1="1" x2="1" y2="0">
+            <stop offset="0" stop-color="#1c4036" />
+            <stop offset="1" stop-color="#356554" />
+          </linearGradient>
+          <radialGradient id="roseG" cx=".38" cy=".3" r=".8">
+            <stop offset="0" stop-color="#e7b2b7" />
+            <stop offset=".45" stop-color="#cd8b95" />
+            <stop offset="1" stop-color="#9b5a67" />
+          </radialGradient>
+          <radialGradient id="roseMid" cx=".4" cy=".32" r=".8">
+            <stop offset="0" stop-color="#d99aa2" />
+            <stop offset="1" stop-color="#a76572" />
+          </radialGradient>
+          <radialGradient id="roseDeep" cx=".42" cy=".35" r=".8">
+            <stop offset="0" stop-color="#b97884" />
+            <stop offset="1" stop-color="#7f4553" />
+          </radialGradient>
+          <radialGradient id="narcG" cx=".4" cy=".3" r=".85">
+            <stop offset="0" stop-color="#fffdf7" />
+            <stop offset=".6" stop-color="#f1e7d6" />
+            <stop offset="1" stop-color="#d9cbb6" />
+          </radialGradient>
+          <linearGradient id="cupG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#f6c07a" />
+            <stop offset="1" stop-color="#c97a2c" />
+          </linearGradient>
+          <linearGradient id="moonFlower" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f7d9bd" stop-opacity=".2" />
+            <stop offset="1" stop-color="#f7d9bd" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+
+        <g class="bouquet__stems" fill="none" stroke="url(#stemG)" stroke-width="3.4" stroke-linecap="round">
+          <path d="M150 252C140 210 130 160 126 92" />
+          <path d="M166 252C178 208 194 160 206 112" />
+          <path d="M158 252C156 220 148 190 138 164" />
+          <path d="M172 252C188 224 208 204 224 190" />
+          <path d="M160 252C162 228 168 206 176 188" />
+        </g>
+
+        <g fill="url(#leafG)">
+          <path d="M146 214C132 206 120 186 124 168C140 176 150 194 146 214Z" />
+          <path d="M176 214C192 206 204 188 200 170C184 178 174 196 176 214Z" opacity=".9" />
+          <path d="M150 176C136 164 132 144 140 128C152 142 156 162 150 176Z" opacity=".85" />
+          <path d="M190 166C204 154 208 134 200 118C188 132 184 152 190 166Z" opacity=".8" />
+          <path d="M126 130C114 118 110 100 118 86C130 98 134 118 126 130Z" opacity=".9" />
+          <path d="M214 152C226 142 232 126 226 112C214 122 208 140 214 152Z" opacity=".75" />
+        </g>
+
+        <!-- نرگس‌ها -->
+        <g transform="translate(126 92) rotate(-8) scale(1.06)">
+          <g fill="url(#narcG)" stroke="#c9bca6" stroke-width=".7">
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(60)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(120)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(180)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(240)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(300)" />
+          </g>
+          <path d="M-8.5 -1  Q0 -7 8.5 -1  Q8 9 0 11  Q-8 9 -8.5 -1Z" fill="url(#cupG)" />
+          <ellipse cx="0" cy="-1" rx="6.4" ry="2.6" fill="#f9cc86" />
+          <ellipse cx="0" cy="-1" rx="3.4" ry="1.3" fill="#c47a30" opacity=".7" />
+        </g>
+
+        <g transform="translate(206 112) rotate(12) scale(.86)">
+          <g fill="url(#narcG)" stroke="#c9bca6" stroke-width=".7">
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(60)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(120)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(180)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(240)" />
+            <ellipse cx="0" cy="-19" rx="8.4" ry="18" transform="rotate(300)" />
+          </g>
+          <path d="M-8.5 -1  Q0 -7 8.5 -1  Q8 9 0 11  Q-8 9 -8.5 -1Z" fill="url(#cupG)" />
+          <ellipse cx="0" cy="-1" rx="6.4" ry="2.6" fill="#f9cc86" />
+          <ellipse cx="0" cy="-1" rx="3.4" ry="1.3" fill="#c47a30" opacity=".7" />
+        </g>
+
+        <g transform="translate(176 178) rotate(30) scale(.66)">
+          <g fill="url(#narcG)" stroke="#c9bca6" stroke-width=".8">
+            <ellipse cx="0" cy="-18" rx="8" ry="17" />
+            <ellipse cx="0" cy="-18" rx="8" ry="17" transform="rotate(72)" />
+            <ellipse cx="0" cy="-18" rx="8" ry="17" transform="rotate(144)" />
+            <ellipse cx="0" cy="-18" rx="8" ry="17" transform="rotate(216)" />
+            <ellipse cx="0" cy="-18" rx="8" ry="17" transform="rotate(288)" />
+          </g>
+          <path d="M-7.5 -1 Q0 -6 7.5 -1 Q7 8 0 10 Q-7 8 -7.5 -1Z" fill="url(#cupG)" />
+          <ellipse cx="0" cy="-1" rx="5.6" ry="2.2" fill="#f9cc86" />
+        </g>
+
+        <!-- رزها -->
+        <g transform="translate(138 164) rotate(-10)">
+          <g fill="url(#roseG)" stroke="#8e4d5b" stroke-opacity=".28" stroke-width=".8">
+            <ellipse cx="0" cy="-16" rx="15" ry="13" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(60)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(120)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(180)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(240)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(300)" />
+          </g>
+          <g fill="url(#roseMid)">
+            <ellipse cx="0" cy="-10" rx="11" ry="9" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(72)" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(144)" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(216)" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(288)" />
+          </g>
+          <g fill="url(#roseDeep)">
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" />
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" transform="rotate(90)" />
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" transform="rotate(180)" />
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" transform="rotate(270)" />
+          </g>
+          <circle r="3.4" fill="#7d4351" />
+          <path d="M-5 -9Q0 -13 6 -8" fill="none" stroke="#f0c6c8" stroke-opacity=".35" stroke-width="1" />
+        </g>
+
+        <g transform="translate(226 190) rotate(16) scale(.78)">
+          <g fill="url(#roseG)" stroke="#8e4d5b" stroke-opacity=".28" stroke-width=".9">
+            <ellipse cx="0" cy="-16" rx="15" ry="13" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(60)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(120)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(180)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(240)" />
+            <ellipse cx="0" cy="-16" rx="15" ry="13" transform="rotate(300)" />
+          </g>
+          <g fill="url(#roseMid)">
+            <ellipse cx="0" cy="-10" rx="11" ry="9" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(72)" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(144)" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(216)" />
+            <ellipse cx="0" cy="-10" rx="11" ry="9" transform="rotate(288)" />
+          </g>
+          <g fill="url(#roseDeep)">
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" />
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" transform="rotate(90)" />
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" transform="rotate(180)" />
+            <ellipse cx="0" cy="-5.5" rx="8" ry="6.6" transform="rotate(270)" />
+          </g>
+          <circle r="3.2" fill="#7d4351" />
+        </g>
+
+        <!-- گلدان -->
+        <ellipse cx="160" cy="250" rx="46" ry="9" fill="#2a1620" opacity=".55" />
+        <path d="M118 248C112 268 108 304 118 334C128 358 192 358 202 334C212 304 208 268 202 248Z"
+          fill="url(#vaseG)" />
+        <path d="M126 258C122 278 120 304 128 328" fill="none" stroke="#e7bcc8" stroke-opacity=".18" stroke-width="7"
+          stroke-linecap="round" />
+        <ellipse cx="160" cy="249" rx="43" ry="8" fill="#3a2030" />
+        <ellipse cx="160" cy="248" rx="34" ry="5.4" fill="#1b0f16" />
+      </svg>
+
+      <div class="mug">
+        <span class="mug__body"></span>
+        <span class="mug__handle"></span>
+        <span class="mug__steam mug__steam--1"></span>
+        <span class="mug__steam mug__steam--2"></span>
+      </div>
+    </div>
+
+    <div class="table"></div>
+    <span class="lamp-glow"></span>
+    <span class="fire-glow"></span>
+  </div>
+
+  <div class="room__dim" aria-hidden="true"></div>
+
+  <!-- بافت و غبار -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" id="ambient" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+
+  <main class="stage">
+
+    <!-- ───────────────── پرده‌ی اول: پاکت ───────────────── -->
+    <section class="scene scene--envelope" id="scene-envelope" aria-label="پاکت نامه">
+      <header class="intro">
+        <p class="intro__kicker"><span></span>برای حدیث<span></span></p>
+        <h1 class="intro__title">نامه‌ای برای تو</h1>
+        <p class="intro__sub">یک چیزِ کوچک، از طرفِ کسی که دوستت دارد</p>
+      </header>
+
+      <button class="envelope" id="envelope" type="button" aria-label="باز کردنِ نامه">
+        <span class="envelope__inner">
+
+          <span class="env__shadow" aria-hidden="true"></span>
+          <span class="env__back" aria-hidden="true"></span>
+          <span class="env__lining" aria-hidden="true"></span>
+
+          <span class="env__card" aria-hidden="true">
+            <span class="env__card-rule"></span>
+            <span class="env__card-rule env__card-rule--short"></span>
+          </span>
+
+          <span class="env__pocket" aria-hidden="true">
+            <span class="env__pl env__pl--left"></span>
+            <span class="env__pl env__pl--right"></span>
+            <span class="env__pl env__pl--bottom"></span>
+          </span>
+
+          <span class="env__label" aria-hidden="true">
+            <span class="env__label-to">به دستِ</span>
+            <span class="env__label-name">حدیثِ من</span>
+            <span class="env__label-rule"></span>
+            <span class="env__label-from">از طرفِ امیر</span>
+          </span>
+
+          <svg class="env__sprig" viewBox="0 0 60 90" aria-hidden="true">
+            <path d="M50 86C36 64 28 44 24 8" fill="none" stroke="currentColor" stroke-width="1.2"
+              stroke-linecap="round" />
+            <ellipse cx="30" cy="26" rx="10" ry="3.4" transform="rotate(38 30 26)" fill="currentColor" opacity=".8" />
+            <ellipse cx="33" cy="40" rx="10" ry="3.4" transform="rotate(-32 33 40)" fill="currentColor" opacity=".65" />
+            <ellipse cx="28" cy="52" rx="9" ry="3.2" transform="rotate(40 28 52)" fill="currentColor" opacity=".8" />
+            <ellipse cx="31" cy="66" rx="9" ry="3.2" transform="rotate(-34 31 66)" fill="currentColor" opacity=".6" />
+            <circle cx="24" cy="8" r="2.2" fill="currentColor" opacity=".75" />
+          </svg>
+
+          <span class="env__flap" aria-hidden="true"></span>
+
+          <span class="env__seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="env__seal-heart">
+              <path
+                d="M12 20.4s-6.7-4.2-8.6-7.8C1.9 9.3 3.3 6.1 6.4 5.5c2.2-.4 4.4.7 5.6 2.4 1.2-1.7 3.4-2.8 5.6-2.4 3.1.6 4.5 3.8 3 7.1-1.9 3.6-8.6 7.8-8.6 7.8z" />
+            </svg>
+          </span>
+
+        </span>
+      </button>
+
+      <p class="hint" id="hint-envelope">
+        <span>بازش کن</span>
+        <svg class="hint__chev" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M4 8l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </p>
+
+      <button class="plan-btn" id="plan-open" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="plan-btn__icon">
+          <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.4" />
+          <path d="M3.5 9.5h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.4"
+            stroke-linecap="round" />
+          <path
+            d="M12 18.2s-3-1.9-3.8-3.5c-.6-1.2 0-2.5 1.3-2.8 1-.2 2 .3 2.5 1.1.5-.8 1.5-1.3 2.5-1.1 1.3.3 1.9 1.6 1.3 2.8-.8 1.6-3.8 3.5-3.8 3.5z"
+            fill="currentColor" />
+        </svg>
+        <span>برنامه‌ی قرارِ بعدی</span>
+      </button>
+    </section>
+
+    <!-- ───────────────── پرده‌ی دوم: عکس ───────────────── -->
+    <section class="scene scene--photo" id="scene-photo" aria-label="عکس ما" aria-hidden="true">
+      <button class="polaroid" id="polaroid" type="button" aria-label="برداشتنِ عکس و دیدنِ نامه">
+        <span class="tape tape--left" aria-hidden="true"></span>
+        <span class="tape tape--right" aria-hidden="true"></span>
+        <span class="polaroid__photo" aria-hidden="true">
+          <img src="assets/us.jpg" alt="عکسی از ما دو نفر" width="960" height="1280" decoding="async">
+          <span class="polaroid__wash" aria-hidden="true"></span>
+        </span>
+        <span class="polaroid__caption">تو، من، و یک روزِ خوب</span>
+      </button>
+
+      <p class="hint hint--photo">
+        <span>عکس را بردار</span>
+        <svg class="hint__chev" viewBox="0 0 20 20" aria-hidden="true">
+          <path d="M4 8l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </p>
+    </section>
+
+    <!-- ───────────────── پرده‌ی سوم: نامه ───────────────── -->
+    <section class="scene scene--letter" id="scene-letter" aria-label="نامه" aria-hidden="true">
+      <article class="letter" id="letter">
+        <span class="letter__crease letter__crease--one" aria-hidden="true"></span>
+        <span class="letter__crease letter__crease--two" aria-hidden="true"></span>
+
+        <svg class="letter__sticker" viewBox="0 0 60 60" aria-hidden="true">
+          <g transform="translate(30 30) rotate(-10)">
+            <g fill="#cd8b95" stroke="#8e4d5b" stroke-opacity=".3" stroke-width=".6">
+              <ellipse cx="0" cy="-12" rx="11" ry="9.5" />
+              <ellipse cx="0" cy="-12" rx="11" ry="9.5" transform="rotate(60)" />
+              <ellipse cx="0" cy="-12" rx="11" ry="9.5" transform="rotate(120)" />
+              <ellipse cx="0" cy="-12" rx="11" ry="9.5" transform="rotate(180)" />
+              <ellipse cx="0" cy="-12" rx="11" ry="9.5" transform="rotate(240)" />
+              <ellipse cx="0" cy="-12" rx="11" ry="9.5" transform="rotate(300)" />
+            </g>
+            <g fill="#b26f7c">
+              <ellipse cx="0" cy="-7" rx="8" ry="6.5" />
+              <ellipse cx="0" cy="-7" rx="8" ry="6.5" transform="rotate(90)" />
+              <ellipse cx="0" cy="-7" rx="8" ry="6.5" transform="rotate(180)" />
+              <ellipse cx="0" cy="-7" rx="8" ry="6.5" transform="rotate(270)" />
+            </g>
+            <circle r="2.6" fill="#814553" />
+          </g>
+          <path d="M48 12c2 5 4 7 9 9-5 2-7 4-9 9-2-5-4-7-9-9 5-2 7-4 9-9z" fill="#c0a06a" opacity=".7" />
+          <path d="M34 50c4 3 6 6 7 10" fill="none" stroke="#245044" stroke-width="1.2" stroke-linecap="round"
+            opacity=".85" />
+          <ellipse cx="43" cy="54" rx="6.5" ry="2.7" transform="rotate(-26 43 54)" fill="#2d5c4c" opacity=".85" />
+          <ellipse cx="38" cy="58" rx="5.2" ry="2.2" transform="rotate(24 38 58)" fill="#245044" opacity=".7" />
+        </svg>
+
+        <div class="letter__scroll" id="letter-scroll">
+          <header class="letter__head">
+            <svg class="ornament" viewBox="0 0 120 24" aria-hidden="true">
+              <path d="M2 12h38M80 12h38" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".55" />
+              <path d="M60 3c-5 4-9 6-9 9s4 5 9 9c5-4 9-6 9-9s-4-5-9-9z" fill="none" stroke="currentColor"
+                stroke-width="1" />
+              <circle cx="60" cy="12" r="2" fill="currentColor" />
+            </svg>
+          </header>
+
+          <!-- ✎ متنِ نامه را از همین‌جا به بعد عوض کن -->
+          <div class="letter__body" id="letter-body">
+            <p class="letter__greet">حدیث خانومِ عزیزم، خوشبو ترین گل جهان، خوشمزه ترین دختر عالم، بهترینِ بهترین ها،
+            </p>
+
+            <p>سلام به روی ماهت، خورشید خوشگل من.</p>
+
+            <p>الان سه ماه شد که من شما رو می‌شناسم، سه ماهِ پر از اتفاقای خوب و یکی دو تا اتفاق عجیب (((:</p>
+
+            <p>سه ماه که بهترین بازه‌ی زندگی من بود، که دختری مثل تو همراهم بود، که خانومی مثل شما هم صحبت من بود، که
+              دلبری کرد و دلم رفت براش.</p>
+
+            <p>حدیث خوشگل و ناز من! من از ته دل تو رو دوست دارم. از تهِ تهِ تهِ قلبم. محبت کردن به تو بهترین کاریه که تو
+              زندگیم انجام دادم و دیدن تو بهترین کاریه که در حق چشام کردم. گوش دادن به صدات، حرف زدن باهات،
+              بوسیدنت...<br>بوییدن عطر تنت...</p>
+
+            <p class="letter__burst">خدایا! من چقددررر تو رو دوست دارم.</p>
+
+            <p>و می‌دونی که دوست دارم تا آخر عمر دستاتو بگیرم، ببرمت هر جا دوست داری، هر چی می‌خوای برات بخرم، و تا ابد
+              خوشحالت کنم.</p>
+
+            <p>دلم زود به زودت برات تنگ میشه، کاش یه روی برسه که دل تنگی بره و بغل هم بودن جاشو بگیره.</p>
+
+            <p class="letter__closing">عاشقتم، زیبا ترین و خانوم ترین دختر دنیا <span class="heart-emoji">❤️</span></p>
+          </div>
+
+          <footer class="letter__sign">
+            <p class="letter__sign-line">همیشه عاشقت،</p>
+            <span class="letter__seal" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M12 20.4s-6.7-4.2-8.6-7.8C1.9 9.3 3.3 6.1 6.4 5.5c2.2-.4 4.4.7 5.6 2.4 1.2-1.7 3.4-2.8 5.6-2.4 3.1.6 4.5 3.8 3 7.1-1.9 3.6-8.6 7.8-8.6 7.8z" />
+              </svg>
+            </span>
+          </footer>
+          <!-- ✎ پایانِ متنِ نامه -->
+        </div>
+
+        <span class="letter__edge letter__edge--top" aria-hidden="true"></span>
+        <span class="letter__edge letter__edge--bottom" aria-hidden="true"></span>
+
+        <button class="scroll-hint" id="scroll-hint" type="button" aria-label="ادامه‌ی نامه">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M4 8l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </article>
+
+      <div class="letter-actions">
+        <button class="back" id="back" type="button">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          <span>برگشتن</span>
+        </button>
+        <button class="plan-btn plan-btn--letter" id="plan-open-letter" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="plan-btn__icon">
+            <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor"
+              stroke-width="1.4" />
+            <path d="M3.5 9.5h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.4"
+              stroke-linecap="round" />
+            <path
+              d="M12 18.2s-3-1.9-3.8-3.5c-.6-1.2 0-2.5 1.3-2.8 1-.2 2 .3 2.5 1.1.5-.8 1.5-1.3 2.5-1.1 1.3.3 1.9 1.6 1.3 2.8-.8 1.6-3.8 3.5-3.8 3.5z"
+              fill="currentColor" />
+          </svg>
+          <span>قرارِ بعدی</span>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <button class="sound" id="sound" type="button" aria-label="پخشِ موسیقی" aria-pressed="false" hidden>
+    <svg class="sound__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 9.5h3.2L12 5.6v12.8l-4.8-3.9H4z" fill="none" stroke="currentColor" stroke-width="1.4"
+        stroke-linejoin="round" />
+      <path class="sound__waves" d="M15.4 9a4.4 4.4 0 0 1 0 6M18.1 6.4a7.9 7.9 0 0 1 0 11.2" fill="none"
+        stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+    </svg>
+  </button>
+  <audio id="audio" src="assets/music.mp3" loop preload="none"></audio>
+
+  <!-- ───────────────── برنامه‌ریزِ قرار ───────────────── -->
+  <dialog class="planner" id="planner" aria-labelledby="planner-title">
+    <form class="planner__card" id="date-form" novalidate>
+      <header class="planner__head">
+        <button class="planner__close" type="button" data-close aria-label="بستن">
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </button>
+        <p class="planner__kicker">برای بعدِ این نامه</p>
+        <h2 class="planner__title" id="planner-title">قرارِ بعدیِ ما</h2>
+        <p class="planner__sub">تو انتخاب کن، بقیه‌اش با من.</p>
+        <div class="steps" id="steps" aria-hidden="true">
+          <span class="steps__dot is-on"></span>
+          <span class="steps__line"></span>
+          <span class="steps__dot"></span>
+          <span class="steps__line"></span>
+          <span class="steps__dot"></span>
+        </div>
+      </header>
+
+      <div class="planner__body" id="planner-body">
+        <section class="pstep is-active" data-step="1" aria-label="انتخاب برنامه">
+          <h3 class="pstep__title">کجا بریم؟</h3>
+          <p class="pstep__hint">یکی یا چند تا — هرچی دلت خواست.</p>
+          <div class="choices" role="group" aria-label="گزینه‌های قرار">
+            <label class="choice">
+              <input type="checkbox" name="activity" value="کافه">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 9h9v4.5a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V9Z" fill="none" stroke="currentColor"
+                    stroke-width="1.4" />
+                  <path d="M14 10h1.6a2.4 2.4 0 0 1 0 4.8H14M4 20.5h12M8 6.5c0-1 1-1.2 1-2.2M11 6.5c0-1 1-1.2 1-2.2"
+                    fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" />
+                </svg>
+                <span class="choice__label">کافه</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="سینما">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3" y="6" width="18" height="12" rx="2" fill="none" stroke="currentColor"
+                    stroke-width="1.4" />
+                  <path d="M10 9.5l5 2.5-5 2.5z" fill="currentColor" />
+                  <path d="M6.5 6v12M17.5 6v12" stroke="currentColor" stroke-width=".8" opacity=".4" />
+                </svg>
+                <span class="choice__label">سینما</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="شام">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 3v6a2 2 0 0 0 4 0V3M9 11v10M16.5 3c1.6 2.2 1.6 5.8 0 8v10" fill="none"
+                    stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+                <span class="choice__label">شام</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="دیت با ماشین">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 15v-3l2-4h12l2 4v3" fill="none" stroke="currentColor" stroke-width="1.4"
+                    stroke-linejoin="round" />
+                  <rect x="3" y="14" width="18" height="4" rx="1.6" fill="none" stroke="currentColor"
+                    stroke-width="1.4" />
+                  <circle cx="7" cy="18" r="1.4" fill="currentColor" />
+                  <circle cx="17" cy="18" r="1.4" fill="currentColor" />
+                </svg>
+                <span class="choice__label">دیت با ماشین</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="نوشیدنی">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 5h16l-8 9-8-9Z" fill="none" stroke="currentColor" stroke-width="1.4"
+                    stroke-linejoin="round" />
+                  <path d="M12 14v6M8.5 20.5h7" fill="none" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                  <circle cx="15" cy="7" r="1.6" fill="currentColor" />
+                </svg>
+                <span class="choice__label">نوشیدنی</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="پارک">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20V11M12 6l4 7H8l4-7ZM12 3l5 8H7l5-8Z" fill="none" stroke="currentColor"
+                    stroke-width="1.4" stroke-linejoin="round" />
+                  <path d="M8 20.5h8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+                <span class="choice__label">پارک</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="موزه">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 9.5L12 4l9 5.5M4.5 9.5h15M6 10v8M10 10v8M14 10v8M18 10v8M3.5 20.5h17" fill="none"
+                    stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span class="choice__label">موزه</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="خرید">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M6 8h12l-1 12H7L6 8Z" fill="none" stroke="currentColor" stroke-width="1.4"
+                    stroke-linejoin="round" />
+                  <path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                </svg>
+                <span class="choice__label">خرید</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+            <label class="choice">
+              <input type="checkbox" name="activity" value="قدم زدن زیرِ برف">
+              <span class="choice__box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.5v19M4.8 6.8l14.4 10.4M19.2 6.8L4.8 17.2" fill="none" stroke="currentColor"
+                    stroke-width="1.25" stroke-linecap="round" />
+                  <path
+                    d="M12 6l-2.2-2.2M12 6l2.2-2.2M12 18l-2.2 2.2M12 18l2.2 2.2M7 8.7l-3-.2M7.7 14.3l-2.2 2.2M17 8.7l3-.2M16.3 14.3l2.2 2.2"
+                    fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" />
+                </svg>
+                <span class="choice__label">قدم زدن توی سرما</span>
+                <span class="choice__tick" aria-hidden="true">✓</span>
+              </span>
+            </label>
+          </div>
+          <p class="pstep__error" id="activity-error" hidden>یه چیزی انتخاب کن، هرچی خودت دوست داری.</p>
+        </section>
+
+        <section class="pstep pstep--time" data-step="2" aria-label="انتخاب زمان">
+          <h3 class="pstep__title">کِی؟</h3>
+          <p class="pstep__hint">روز و ساعتش رو تو بگو.</p>
+          <div class="fields">
+            <div class="field field--date">
+              <span class="field__label">تاریخ</span>
+              <button type="button" class="datebtn" id="date-btn" aria-expanded="false" aria-controls="calendar">
+                <svg class="datebtn__cal" viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor"
+                    stroke-width="1.4" />
+                  <path d="M3.5 9.5h17M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.4"
+                    stroke-linecap="round" />
+                </svg>
+                <span class="datebtn__text" id="date-btn-text">انتخاب روز</span>
+                <svg class="datebtn__chev" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 7l6 6 6-6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="field field--time">
+              <span class="field__label">ساعت</span>
+              <div class="timepick">
+                <svg class="timepick__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.3" />
+                  <path d="M12 7.4V12l3.1 1.9" fill="none" stroke="currentColor" stroke-width="1.3"
+                    stroke-linecap="round" />
+                </svg>
+                <select id="hour" aria-label="ساعت"></select>
+                <span class="timepick__colon">:</span>
+                <select id="minute" aria-label="دقیقه"></select>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-times" role="group" aria-label="ساعت‌های پیشنهادی">
+            <button type="button" class="quick" data-time="17:00">عصرانه</button>
+            <button type="button" class="quick" data-time="20:00">شام</button>
+            <button type="button" class="quick" data-time="22:00">بعد از شام</button>
+          </div>
+
+          <div class="calendar" id="calendar" hidden>
+            <div class="calendar__head">
+              <button type="button" class="calendar__nav calendar__nav--prev" id="cal-prev" aria-label="ماه قبل">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <span class="calendar__month" id="cal-month"></span>
+              <button type="button" class="calendar__nav calendar__nav--next" id="cal-next" aria-label="ماه بعد">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button type="button" class="calendar__close" id="cal-close" aria-label="بستن تقویم">
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M6 6l8 8M14 6l-8 8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+            <div class="calendar__week" aria-hidden="true">
+              <span>ش</span><span>ی</span><span>د</span><span>س</span><span>چ</span><span>پ</span><span>ج</span>
+            </div>
+            <div class="calendar__grid" id="cal-grid" role="grid" aria-label="تقویم"></div>
+          </div>
+
+          <p class="date-fa" id="date-fa" aria-live="polite"></p>
+
+          <p class="pstep__error" id="time-error" hidden>تاریخ و ساعت رو انتخاب کن.</p>
+
+          <label class="field field--wide">
+            <span class="field__label">یادداشت <span class="field__opt">(اختیاری)</span></span>
+            <input type="text" id="note" name="note" maxlength="120" placeholder="مثلاً: بستنی هم بخریم">
+          </label>
+        </section>
+
+        <section class="pstep" data-step="3" aria-label="مرور قرار">
+          <h3 class="pstep__title">مرورِ قرار</h3>
+          <p class="pstep__hint">یه بار دیگه نگاه کن.</p>
+          <ul class="summary" id="summary"></ul>
+          <p class="planner__note">این‌ها رو برام می‌فرستی، منم ترتیبش رو می‌دم <span
+              class="planner__note-heart">♥</span></p>
+          <p class="pstep__error" id="send-error" hidden>
+            ارسال نشد. یه بار دیگه امتحان کن یا
+            <a id="mailto-fallback" href="#">خودت برام بفرست</a>.
+          </p>
+        </section>
+
+        <section class="pstep pstep--done" data-step="4" aria-label="ارسال شد">
+          <span class="done-seal" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 20.4s-6.7-4.2-8.6-7.8C1.9 9.3 3.3 6.1 6.4 5.5c2.2-.4 4.4.7 5.6 2.4 1.2-1.7 3.4-2.8 5.6-2.4 3.1.6 4.5 3.8 3 7.1-1.9 3.6-8.6 7.8-8.6 7.8z" />
+            </svg>
+          </span>
+          <h3 class="pstep__title">رسید!</h3>
+          <p class="done-text">حالا فقط بمونه تا اون روز…<br>دوستت دارم <span class="planner__note-heart">♥</span></p>
+          <button type="button" class="btn btn--ghost" data-close>بستن</button>
+        </section>
+      </div>
+
+      <footer class="planner__foot">
+        <button type="button" class="btn btn--ghost" id="prev" hidden>قبلی</button>
+        <button type="button" class="btn btn--primary" id="next">ادامه</button>
+        <button type="submit" class="btn btn--primary" id="submit" hidden>
+          <span class="btn__label">بفرست برام</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+        <p class="planner__tiny">فقط برای من فرستاده می‌شه.</p>
+      </footer>
+    </form>
+  </dialog>
+
+  <!-- ───────────────── فرمِ پنهانِ نتفلیفی برای دریافتِ قرار ───────────────── -->
+  <form name="date-plan" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="text" name="bot-field">
+    <input type="text" name="activities">
+    <input type="text" name="date">
+    <input type="text" name="time">
+    <input type="text" name="note">
+  </form>
+
+  <noscript>
+    <style>
+      .scene--envelope,
+      .scene--photo {
+        display: none
+      }
+
+      .scene--letter {
+        opacity: 1;
+        visibility: visible;
+        filter: none;
+        transform: none;
+        pointer-events: auto
+      }
+
+      .letter {
+        height: 82svh;
+        opacity: 1;
+        transform: none
+      }
+
+      .letter__body p,
+      .letter__greet,
+      .letter__sign {
+        opacity: 1;
+        transform: none
+      }
+    </style>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
